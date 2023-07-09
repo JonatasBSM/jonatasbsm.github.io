@@ -332,3 +332,23 @@ section:nth-child(even) {
   top: 0;
   left: 0;
 }
+
+@media (max-width: 768px) {
+
+    #welcome-section {
+        flex-direction: column;
+    }
+
+    .welcome-icon img {
+        width: 100%;
+    }
+
+    /* ... */
+    section {
+        height: auto;
+      }
+
+    .custom-list {
+        grid-template-columns: 1fr
+    }
+}
