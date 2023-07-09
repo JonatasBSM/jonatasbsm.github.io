@@ -1,0 +1,334 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ecf1fd;
+}
+
+header {
+    text-align: right;
+}
+
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #26cbd6; /* Adjust the color as desired */
+}
+
+main {
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.welcome-text {
+    margin-bottom: 65px;
+    align-self: center;
+}
+
+section {
+    position: relative;
+    background-color: white;
+    color: #777;
+    padding: 90px;
+    height: 60vh;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.subheading {
+    font-size: 24px;
+    color: #777;
+    margin-bottom: 40px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#projects {
+    color: #157797;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.readme {
+    margin-top: 20px;
+}
+
+.readme-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.resume {
+    font-size: 16px;
+    color: #777;
+}
+
+#contact {
+    color: #2cac5d;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Add margin between sections */
+
+/* Alternate alignment of sections */
+section:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+    background-color: #ECF1FD;
+}
+
+section:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+
+.custom-list {
+    width: 20%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as desired */
+    grid-row-gap: 10px;
+}
+
+#projects .custom-list {
+    width: 100%;
+}
+
+#projects .custom-box {
+    width: 80%;
+    height: 30vh;
+    align-self: center;
+}
+
+.custom-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s linear;
+    width: 60%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.custom-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.skill-level {
+    display: flex;
+    align-items: center;
+}
+
+.skill-mark {
+    width: 20px;
+    height: 4px;
+    background-color: #26cbd6; /* Adjust the color as desired */
+    margin-right: 4px;
+}
+
+.skill-mark.empty {
+    background-color: #ccc; /* Adjust the color as desired for empty skill marks */
+}
+
+.project .technologies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project .technologies .column {
+    flex: 1 0 auto;
+}
+
+.project .technologies .column:last-child {
+    margin-right: 0;
+}
+
+.project ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project li {
+    margin-bottom: 0.5rem;
+}
+
+.project .project-details {
+    display: none;
+}
+
+.project.active .project-details {
+    display: block;
+}
+
+.project {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.project .video {
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.project h3:hover {
+    color: #26cbd6; /* Adjust the color as desired */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.video-player {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume {
+    margin-top: 20px;
+}
+
+.modal-content {
+  width: 80%; /* Adjust the width as desired */
+  max-width: 800px; /* Set a maximum width if needed */
+  margin: 0 auto;
+  border-radius: 10px; /* Add border radius */
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.modal-content .video-player {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (change this value as needed) */
+  position: relative;
+}
+
+.modal-content .video-player video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
