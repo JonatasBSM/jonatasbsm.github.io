@@ -47,3 +47,33 @@ function closeModal() {
 
 // Add click event listener to the close button
 window.addEventListener("click", closeModal);
+
+const sections = document.querySelectorAll("section");
+
+// Create a new Intersection Observer instance
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    } else {
+      entry.target.classList.remove("active");
+    }
+  });
+}, { threshold: 0.5 }); // Adjust the threshold value as desired
+
+// Function to enable or disable the observer
+function toggleObserver(enable) {
+  if (enable) {
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  } else {
+    sections.forEach((section) => {
+      observer.unobserve(section);
+      section.classList.remove("active");
+    });
+  }
+}
+
+// Call toggleObserver(true) to enable the observer initially
+toggleObserver(true);
