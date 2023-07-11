@@ -70,6 +70,10 @@ main {
     align-self: center;
 }
 
+.welcome-text h2 {
+    color: #26cbd6
+}
+
 section {
     position: relative;
     background-color: white;
@@ -159,10 +163,18 @@ section:nth-child(odd) {
     background-color: #ECF1FD;
 }
 
+section:nth-child(odd) h2 {
+    color: #777;
+}
+
 section:nth-child(even) {
     margin-left: auto;
     margin-right: 0;
     text-align: right;
+}
+
+section:nth-child(even) h2 {
+    color: #26cbd6;
 }
 
 .custom-list {
