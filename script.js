@@ -48,7 +48,7 @@ function closeModal() {
 // Add click event listener to the close button
 window.addEventListener("click", closeModal);
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("#welcome-section, section")
 
 // Create a new Intersection Observer instance
 const observer = new IntersectionObserver((entries) => {
