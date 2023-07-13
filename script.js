@@ -59,7 +59,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove("active");
     }
   });
-}, { threshold: 0.5 }); // Adjust the threshold value as desired
+}, { threshold: 0.4 }); // Adjust the threshold value as desired
 
 // Function to enable or disable the observer
 function toggleObserver(enable) {
