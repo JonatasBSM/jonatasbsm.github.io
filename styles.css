@@ -106,12 +106,14 @@ h2 {
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2 {
+
+
+img, h1, h2 {
     transform: scale(1);
     transition: transform 0.3s ease;
 }
 
-h1:hover, h2:hover {
+img:hover, h1:hover, h2:hover {
     transform: scale(1.05);
 }
 
@@ -400,8 +402,3 @@ section:nth-child(even) h2 {
     }
 
 }
-
-
-
-
-
