@@ -44,6 +44,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav ul li a:hover {
@@ -84,6 +85,10 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
+}
+
+section h2 {
+    width: fit-content;
 }
 
 #welcome-section.active, section.active {
@@ -175,7 +180,7 @@ section:nth-child(odd) {
 }
 
 section:nth-child(odd) h2 {
-    color: #777;
+    color: #333;
 }
 
 section:nth-child(even) {
@@ -186,6 +191,7 @@ section:nth-child(even) {
 
 section:nth-child(even) h2 {
     color: #26cbd6;
+    align-self: flex-end;
 }
 
 .custom-list {
@@ -397,7 +403,7 @@ section:nth-child(even) h2 {
         flex-direction: column;
     }
 
-    .welcome-icon img {
+    .welcome-icon img, #about img {
         width: 100%;
     }
 
