@@ -214,6 +214,7 @@ section:nth-child(even) h2 {
 }
 
 .custom-box {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,7 +232,22 @@ section:nth-child(even) h2 {
     transform: scale(1.05);
 }
 
+#skills .container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#skills .container ul {
+    margin-top: 7em;
+    align-self: center;
+    margin-left: 15em;
+}
+
+
+
 .skill-item {
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -384,6 +400,8 @@ section:nth-child(even) h2 {
   left: 0;
 }
 
+
+
 @media (max-width: 767px) {
 
 
@@ -401,6 +419,20 @@ section:nth-child(even) h2 {
 
     #welcome-section {
         flex-direction: column;
+    }
+
+    #skills .container {
+        flex-direction: column;
+    }
+
+    #skills .container ul {
+        margin-top: 5px;
+        margin-left: 0px;
+        align-self:normal
+    }
+
+    #skills .title-icon-div img {
+        width: 100%;
     }
 
     .welcome-icon img, #about img {
