@@ -61,6 +61,19 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.38 }); // Adjust the threshold value as desired
 
+
+
+function typewriterEffect(element, text, speed) {
+  let i = 0;
+  const interval = setInterval(() => {
+    element.innerHTML += text.charAt(i);
+    i++;
+    if (i > text.length) {
+      clearInterval(interval);
+    }
+  }, speed);
+}
+
 // Function to enable or disable the observer
 function toggleObserver(enable) {
   if (enable) {
@@ -74,6 +87,13 @@ function toggleObserver(enable) {
     });
   }
 }
+
+var subheading = document.querySelector('.subheading .typing-text')
+const subheadingContent = subheading.innerHTML
+
+subheading.innerHTML = ''
+
+typewriterEffect(subheading, subheadingContent, 50)
 
 // Call toggleObserver(true) to enable the observer initially
 toggleObserver(true);
