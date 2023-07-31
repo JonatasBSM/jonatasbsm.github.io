@@ -421,16 +421,6 @@ section:nth-child(even) h2 {
         flex-direction: column;
     }
 
-    #skills .container {
-        flex-direction: column;
-    }
-
-    #skills .container ul {
-        margin-top: 5px;
-        margin-left: 0px;
-        align-self:normal
-    }
-
     #skills .title-icon-div img {
         width: 100%;
     }
@@ -439,4 +429,21 @@ section:nth-child(even) h2 {
         width: 100%;
     }
 
+}
+
+@media (max-width: 1400px) {
+    #skills .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills .container ul {
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+
+    .custom-list {
+        width: 100%;
+        justify-items: center;
+    }
 }
