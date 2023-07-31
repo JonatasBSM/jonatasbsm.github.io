@@ -443,7 +443,7 @@ section:nth-child(even) h2 {
     }
 
     .custom-list {
-        width: 100%;
+        width: fit-content;
         justify-items: center;
     }
 }
