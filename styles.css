@@ -456,7 +456,7 @@ section:nth-child(even) h2 {
         margin-left: 0px;
     }
 
-    .custom-list {
+    #skills .custom-list {
         width: fit-content;
         justify-items: center;
     }
