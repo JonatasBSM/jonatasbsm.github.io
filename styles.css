@@ -404,7 +404,18 @@ section:nth-child(even) h2 {
   left: 0;
 }
 
+@media (max-width: 539px) {
 
+    nav ul li {
+        display: inline-block;
+        margin-left: 0px;
+    }
+
+    nav ul li a {
+
+        margin-left: 3px;
+    }
+}
 
 @media (max-width: 767px) {
 
