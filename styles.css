@@ -404,6 +404,13 @@ section:nth-child(even) h2 {
   left: 0;
 }
 
+@media (max-width: 540px) {
+    #about, #projects {
+        padding-top: 90px;
+        padding-right: 0px;
+        padding-left: 0px
+    }
+}
 
 
 @media (max-width: 767px) {
