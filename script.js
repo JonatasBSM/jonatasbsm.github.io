@@ -59,7 +59,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove("active");
     }
   });
-}, { threshold: window.screen.width < 350 ? 0.2 : (window.screen.width <= 600 ? 0.25 : 0.4) }); // Adjust the threshold value as desired
+}, { threshold: window.screen.width < 350 ? 0.2 : (window.screen.width <= 600 ? 0.3 : 0.4) }); // Adjust the threshold value as desired
 
 
 
