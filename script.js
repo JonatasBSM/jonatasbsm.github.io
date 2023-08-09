@@ -46,7 +46,12 @@ function closeModal() {
 }
 
 // Add click event listener to the close button
-window.addEventListener("click", closeModal);
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+      closeModal()
+  }
+});
 
 const sections = document.querySelectorAll("#welcome-section, section")
 

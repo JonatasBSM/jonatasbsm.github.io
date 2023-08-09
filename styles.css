@@ -426,6 +426,12 @@ section:nth-child(even) h2 {
 
 @media (max-width: 767px) {
 
+    .modal-content .resume {
+        height: 3em;
+        padding-top: 0.7em;
+        overflow-y: auto;
+        font-size: 0.7em;
+    }
 
     /* ... */
     section {
