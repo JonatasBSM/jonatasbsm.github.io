@@ -345,11 +345,7 @@ section:nth-child(even) h2 {
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+
 }
 
 .close {
@@ -369,23 +365,21 @@ section:nth-child(even) h2 {
 
 .video-player {
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.resume {
-    margin-top: 20px;
-}
 
 .modal-content {
   width: 80%; /* Adjust the width as desired */
   max-width: 800px; /* Set a maximum width if needed */
   margin: 0 auto;
-  border-radius: 10px; /* Add border radius */
   overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 80%;
 }
 
 
@@ -402,6 +396,12 @@ section:nth-child(even) h2 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.modal-content .resume {
+    padding: 3em;
+    font-family: 'Poppins', sans-serif;
+    color: black;
 }
 
 @media (max-width: 540px) {
