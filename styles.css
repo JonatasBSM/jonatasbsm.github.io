@@ -214,6 +214,7 @@ section:nth-child(even) h2 {
     width: 80%;
     height: 30vh;
     align-self: center;
+    justify-content: center;
     padding: 0;
 }
 
@@ -327,6 +328,14 @@ section:nth-child(even) h2 {
     transition: color 0.3s ease;
 }
 
+#battle-frontier-image {
+    width: 70%;
+}
+
+#mbya-image {
+    width: 50%;
+}
+
 .project h3:hover {
     color: #26cbd6; /* Adjust the color as desired */
 }
@@ -344,9 +353,7 @@ section:nth-child(even) h2 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
 
-}
 
 .close {
     color: #aaa;
