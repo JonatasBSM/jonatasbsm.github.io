@@ -504,3 +504,15 @@ section:nth-child(even) h2 {
         overflow-y: auto;
     }
 }
+
+@media(min-height: 751px) {
+    #projects .custom-box {
+        height: 20vh;
+    }
+}
+
+@media(min-height: 1024px) {
+    #projects .custom-box {
+        height: 10vh;
+    }
+}
