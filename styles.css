@@ -497,3 +497,10 @@ section:nth-child(even) h2 {
         max-height: 90%;
     }
 }
+
+@media (max-height: 550px) {
+    .modal-content .resume {
+        height: 2em;
+        overflow-y: auto;
+    }
+}
