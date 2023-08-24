@@ -424,7 +424,7 @@ section:nth-child(even) h2 {
     width: fit-content;
     flex-direction: column;
     justify-content: center;
-    row-gap: 1em;
+    row-gap: 1.7em;
 }
 
 .social-icons div {
@@ -436,8 +436,8 @@ section:nth-child(even) h2 {
     margin-left: 1em;
     align-self: center;
     text-decoration: none;
-    color: black;
-    font-size: 24px;
+    color: #333;
+    font-size: 20px;
 }
 
 .row-contact {
