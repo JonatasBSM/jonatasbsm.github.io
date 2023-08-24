@@ -506,8 +506,10 @@ section:nth-child(even) h2 {
     #contact img {
         width: 100%;
         align-self: center;
-        padding-top: 1em;
+        padding-top: 3em;
     }
+
+
 
 }
 
@@ -525,6 +527,13 @@ section:nth-child(even) h2 {
     #skills .custom-list {
         width: fit-content;
         justify-items: center;
+    }
+
+    .row-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
     }
 
     .modal-content {
