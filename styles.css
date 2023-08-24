@@ -419,6 +419,33 @@ section:nth-child(even) h2 {
     color: black;
 }
 
+.social-icons {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1em;
+}
+
+.social-icons div {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-icons div a {
+    margin-left: 1em;
+    align-self: center;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+.row-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 @media (max-width: 540px) {
     #about, #projects {
         padding-top: 90px;
