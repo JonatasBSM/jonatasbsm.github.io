@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Roboto+Condensed&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -12,10 +10,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #ecf1fd;
+    background-color:  #5F2EE6;
 }
 
 header {
@@ -40,7 +37,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -48,22 +45,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #26cbd6; /* Adjust the color as desired */
+    color: #E6D82D; /* Adjust the color as desired */
     transform: scale(1.1); 
-}
-
-main {
-    margin-top: 100px;
-    padding: 40px 0;
 }
 
 #welcome-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
+    height: 100vh;
 }
 
 .welcome-text {
@@ -72,7 +64,7 @@ main {
 }
 
 .welcome-text h2 {
-    color: #26cbd6
+    color: white
 }
 
 section {
@@ -80,9 +72,8 @@ section {
     background-color: white;
     color: #777;
     padding: 90px;
-    height: fit-content;
+    height: 100vh;
     margin: 0 auto;
-    opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -91,24 +82,19 @@ section h2 {
     width: fit-content;
 }
 
-#welcome-section.active, section.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
 h1 {
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 900;
     margin-bottom: 10px;
-    color: #333;
-    font-family: 'Poppins', sans-serif;
+    color: #E6D82D;
 }
 
 h2 {
     font-size: 36px;
+    font-weight: 900;
     margin-bottom: 20px;
     color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -124,9 +110,35 @@ img:hover, h1:hover, h2:hover {
 
 .subheading {
     font-size: 24px;
-    color: #777;
+    color: white;
     margin-bottom: 40px;
-    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#about img {
+    margin-top: -70px;
+}
+
+#about h2 {
+    align-self: flex-end;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.5; /* Adjust as needed */
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.aligned-text::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
 
 #projects {
@@ -144,8 +156,6 @@ img:hover, h1:hover, h2:hover {
 }
 
 .readme-title {
-    font-size: 24px;
-    font-weight: bold;
     color: #333;
 }
 
@@ -154,8 +164,11 @@ img:hover, h1:hover, h2:hover {
     color: #777;
 }
 
+
 #contact {
-    color: #2cac5d;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
 #contact img {
@@ -180,11 +193,11 @@ section:nth-child(odd) {
     margin-left: 0;
     margin-right: auto;
     text-align: left;
-    background-color: #ECF1FD;
+    background-color: #5F2EE6;
 }
 
 section:nth-child(odd) h2 {
-    color: #333;
+    color: #E6D82D;
 }
 
 section:nth-child(even) {
@@ -194,8 +207,8 @@ section:nth-child(even) {
 }
 
 section:nth-child(even) h2 {
-    color: #26cbd6;
-    align-self: flex-end;
+    color: #5F2EE6;
+    align-self: flex-start;
 }
 
 .custom-list {
@@ -234,13 +247,13 @@ section:nth-child(even) h2 {
 }
 
 #projects .custom-box:hover {
-    box-shadow: 0 6px 10px #a8d1d7,
+    box-shadow: 0 6px 10px #E6D82D,
     0 -2px 6px rgba(0, 0, 0, 0.05); 
     transform: scale(1.05);
 }
 
 .custom-box:hover {
-    box-shadow: 0 2px 4px #86bfc7;
+    box-shadow: 0 2px 4px #E6D82D;
     transform: scale(1.05);
 }
 
@@ -283,7 +296,7 @@ section:nth-child(even) h2 {
 .skill-mark {
     width: 20px;
     height: 4px;
-    background-color: #26cbd6; /* Adjust the color as desired */
+    background-color: #5F2EE6; /* Adjust the color as desired */
     margin-right: 4px;
 }
 
@@ -344,7 +357,7 @@ section:nth-child(even) h2 {
 }
 
 .project h3:hover {
-    color: #26cbd6; /* Adjust the color as desired */
+    color: #5F2EE6; /* Adjust the color as desired */
 }
 
 /* Modal styles */
@@ -420,6 +433,7 @@ section:nth-child(even) h2 {
 }
 
 .social-icons {
+    margin-top: -40px;
     display: flex;
     width: fit-content;
     flex-direction: column;
@@ -436,7 +450,7 @@ section:nth-child(even) h2 {
     margin-left: 1em;
     align-self: center;
     text-decoration: none;
-    color: #333;
+    color: white;
     font-size: 20px;
 }
 
@@ -514,6 +528,10 @@ section:nth-child(even) h2 {
         flex-direction: column;
         justify-content: none;
         align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column;
     }
 
 }

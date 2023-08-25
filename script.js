@@ -56,16 +56,25 @@ window.addEventListener('click', (event) => {
 const sections = document.querySelectorAll("#welcome-section, section")
 
 // Create a new Intersection Observer instance
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    } else {
-      entry.target.classList.remove("active");
-    }
-  });
-}, { threshold: window.screen.width < 350 ? 0.2 : 0.3 }); // Adjust the threshold value as desired
+let currentSectionIndex = 0;
 
+// Function to handle the scroll event
+function handleScroll(event) {
+    const direction = event.deltaY > 0 ? 1 : -1; // Check scroll direction
+    currentSectionIndex += direction;
+
+    // Ensure the index stays within bounds
+    currentSectionIndex = Math.min(Math.max(currentSectionIndex, 0), sections.length - 1);
+
+    // Scroll to the next section
+    sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+
+    // Prevent default scrolling behavior
+    event.preventDefault();
+}
+
+// Attach the scroll event listener to the document
+document.addEventListener('wheel', handleScroll, { passive: false });
 
 
 function typewriterEffect(element, text, speed) {
@@ -79,19 +88,6 @@ function typewriterEffect(element, text, speed) {
   }, speed);
 }
 
-// Function to enable or disable the observer
-function toggleObserver(enable) {
-  if (enable) {
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  } else {
-    sections.forEach((section) => {
-      observer.unobserve(section);
-      section.classList.remove("active");
-    });
-  }
-}
 
 var subheading = document.querySelector('.subheading .typing-text')
 const subheadingContent = subheading.innerHTML
@@ -100,5 +96,4 @@ subheading.innerHTML = ''
 
 typewriterEffect(subheading, subheadingContent, 50)
 
-// Call toggleObserver(true) to enable the observer initially
-toggleObserver(true);
+
