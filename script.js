@@ -53,7 +53,7 @@ window.addEventListener('click', (event) => {
   }
 });
 
-const sections = document.querySelectorAll("#welcome-section, section")
+const sections = document.querySelectorAll("nav, section")
 
 // Create a new Intersection Observer instance
 let currentSectionIndex = 0;

@@ -7,6 +7,7 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
 }
 
 body {
@@ -22,7 +23,6 @@ header {
 .container {
     max-width: 70%;
     margin: 0 auto;
-    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -68,10 +68,14 @@ nav ul li a:hover {
 }
 
 section {
+    display: flex;
+    justify-items: center;
+    align-items: center;
     position: relative;
     background-color: white;
     color: #777;
-    padding: 90px;
+    padding-left: 100px;
+    padding-right: 100px;
     height: 100vh;
     margin: 0 auto;
     transform: translateY(20px);
@@ -165,11 +169,7 @@ img:hover, h1:hover, h2:hover {
 }
 
 
-#contact {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-}
+
 
 #contact img {
     align-self: flex-end;
