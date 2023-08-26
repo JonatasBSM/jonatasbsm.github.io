@@ -152,16 +152,6 @@ img:hover, h1:hover, h2:hover {
     width: 100%;
 }
 
-#projects {
-    color: #157797;
-}
-
-.project-box {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 .readme {
     margin-top: 20px;
 }
@@ -175,8 +165,20 @@ img:hover, h1:hover, h2:hover {
     color: #777;
 }
 
-
-
+#projects {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .project-home, .teambuilder-container,
+  .mbya-container {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+  }
 
 #contact img {
     align-self: flex-end;
@@ -230,19 +232,9 @@ section:nth-child(4n+4) h2 {
     grid-row-gap: 10px;
 }
 
-#projects .custom-list {
-    width: 100%;
-}
 
-#projects .custom-box {
-    width: 80%;
-    height: 30vh;
-    align-self: center;
-    justify-content: center;
-    padding: 0;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1),
-                0 -2px 6px rgba(0, 0, 0, 0.05); /* Less intense shadow on top */
-}
+
+
 
 .custom-box {
     background-color: white;
@@ -257,11 +249,7 @@ section:nth-child(4n+4) h2 {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-#projects .custom-box:hover {
-    box-shadow: 0 6px 10px #E6D82D,
-    0 -2px 6px rgba(0, 0, 0, 0.05); 
-    transform: scale(1.05);
-}
+
 
 .custom-box:hover {
     box-shadow: 0 2px 4px #E6D82D;
@@ -319,49 +307,13 @@ section:nth-child(4n+4) h2 {
     background-color: #ccc; /* Adjust the color as desired for empty skill marks */
 }
 
-.project .technologies {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.project .technologies .column {
-    flex: 1 0 auto;
-}
 
-.project .technologies .column:last-child {
-    margin-right: 0;
-}
 
-.project ul {
-    list-style-type: none;
-    padding-left: 0;
-}
 
-.project li {
-    margin-bottom: 0.5rem;
-}
 
-.project .project-details {
-    display: none;
-}
 
-.project.active .project-details {
-    display: block;
-}
 
-.project {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.project .video {
-    margin-bottom: 10px;
-}
-
-.project h3 {
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
 
 #battle-frontier-image {
     width: 70%;
@@ -369,23 +321,6 @@ section:nth-child(4n+4) h2 {
 
 #mbya-image {
     width: 50%;
-}
-
-.project h3:hover {
-    color: #5F2EE6; /* Adjust the color as desired */
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -407,44 +342,6 @@ section:nth-child(4n+4) h2 {
 
 .video-player {
     text-align: center;
-}
-
-
-.modal-content {
-  width: 80%; /* Adjust the width as desired */
-  max-width: 800px; /* Set a maximum width if needed */
-  margin: 0 auto;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fefefe;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-
-.modal-content .video-player {
-  width: 100%;
-  height: 0;
-  padding-bottom: 45.25%; /* 16:9 aspect ratio (change this value as needed) */
-  position: relative;
-}
-
-.modal-content .video-player video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.modal-content .resume {
-    padding: 3em;
-    padding-top: 1.5em;
-    font-family: 'Poppins', sans-serif;
-    color: black;
 }
 
 .social-icons {
@@ -501,13 +398,7 @@ section:nth-child(4n+4) h2 {
         height: fit-content;
     }
 
-    .modal-content .resume {
-        height: 3em;
-        padding-top: 0.7em;
-        overflow-y: auto;
-        font-size: 0.7em;
-        
-    }
+
 
     /* ... */
     section {
@@ -611,26 +502,8 @@ section:nth-child(4n+4) h2 {
         justify-items: center;
     }
 
-    .modal-content {
-        max-height: 90%;
-    }
+
 }
 
-@media (max-height: 550px) {
-    .modal-content .resume {
-        height: 2em;
-        overflow-y: auto;
-    }
-}
 
-@media(min-height: 751px) {
-    #projects .custom-box {
-        height: 20vh;
-    }
-}
 
-@media(min-height: 1024px) {
-    #projects .custom-box {
-        height: 10vh;
-    }
-}
