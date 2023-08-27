@@ -45,7 +45,7 @@ function scrollToCurrentProject() {
 function updateProgress() {
   progressPoints.forEach((point, index) => {
 
-    if (index === currentProjectIndex) {
+    if (index === currentProjectIndex || (index == currentProjectIndex+3) || (index == currentProjectIndex+6)) {
       point.classList.add('active');
     } else {
       point.classList.remove('active');
