@@ -28,16 +28,29 @@ const projectContainers = document.querySelectorAll('.project-home, .teambuilder
 const prevProjectBtns = document.querySelectorAll('.prevProjectBtn');
 const nextProjectBtns = document.querySelectorAll('.nextProjectBtn');
 const projectsSection = document.getElementById('projects');
+const progressPoints = document.querySelectorAll('.progress-point'); // Add this line
 let currentProjectIndex = 0;
 
 function navigateToProject(index) {
   currentProjectIndex = Math.max(Math.min(index, projectContainers.length - 1), 0);
   scrollToCurrentProject();
+  updateProgress(); // Add this line
 }
 
 function scrollToCurrentProject() {
   const container = projectContainers[currentProjectIndex];
   projectsSection.scrollLeft = container.offsetLeft;
+}
+
+function updateProgress() {
+  progressPoints.forEach((point, index) => {
+
+    if (index === currentProjectIndex) {
+      point.classList.add('active');
+    } else {
+      point.classList.remove('active');
+    }
+  });
 }
 
 prevProjectBtns.forEach(button => {
@@ -47,6 +60,8 @@ prevProjectBtns.forEach(button => {
 nextProjectBtns.forEach(button => {
   button.addEventListener('click', () => navigateToProject(currentProjectIndex + 1));
 });
+
+updateProgress();
 
 function typewriterEffect(element, text, speed) {
   let i = 0;

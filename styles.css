@@ -160,10 +160,7 @@ img:hover, h1:hover, h2:hover {
     color: #333;
 }
 
-.resume {
-    font-size: 16px;
-    color: #777;
-}
+
 
 #projects {
     display: flex;
@@ -181,13 +178,47 @@ img:hover, h1:hover, h2:hover {
     display: flex;
   }
 
-  #projects div:nth-child(odd) {
+  .teambuilder-container {
     background-color: white;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teambuilder-container h1 {
     color: #5F2EE6;
   }
 
-  #projects div:nth-child(even) {
-    background-color: #5F2EE6;
+  .teambuilder-container .buttons {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .teambuilder-container .content {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .teambuilder-container .firstCol, .teambuilder-container .secondCol {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 80%;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+
+
+  .mbya-container {
+    background-color: #333;
     color: white;
   }
 
@@ -527,5 +558,50 @@ section:nth-child(4n+4) h2 {
 
 }
 
+.slider {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
 
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .progress-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .progress-points {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Progress Points */
+  .progress-point {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Active Progress Point */
+  .progress-point.active {
+    background-color: #007bff; /* Change to the desired active color */
+  }
 
+  
+  
