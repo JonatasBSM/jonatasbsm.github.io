@@ -587,12 +587,6 @@ section:nth-child(4n+4) h2 {
 
 }
 
-.slider {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 /* Progress Bar */
 .progress-bar {
     display: flex;

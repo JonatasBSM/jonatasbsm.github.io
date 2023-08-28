@@ -25,16 +25,16 @@ function handleScroll(event) {
 document.addEventListener('wheel', handleScroll, { passive: false });
 
 const projectContainers = document.querySelectorAll('.project-home, .teambuilder-container, .mbya-container');
-const prevProjectBtns = document.querySelectorAll('.prevProjectBtn');
-const nextProjectBtns = document.querySelectorAll('.nextProjectBtn');
 const projectsSection = document.getElementById('projects');
-const progressPoints = document.querySelectorAll('.progress-point'); // Add this line
+const progressPoints = document.querySelectorAll('.progress-point');
 let currentProjectIndex = 0;
+let dragStartX = 0;
+let isDragging = false;
 
 function navigateToProject(index) {
   currentProjectIndex = Math.max(Math.min(index, projectContainers.length - 1), 0);
   scrollToCurrentProject();
-  updateProgress(); // Add this line
+  updateProgress();
 }
 
 function scrollToCurrentProject() {
@@ -44,8 +44,7 @@ function scrollToCurrentProject() {
 
 function updateProgress() {
   progressPoints.forEach((point, index) => {
-
-    if (index === currentProjectIndex || (index == currentProjectIndex+3) || (index == currentProjectIndex+6)) {
+    if (index === currentProjectIndex || index === currentProjectIndex + 3 || index === currentProjectIndex + 6) {
       point.classList.add('active');
     } else {
       point.classList.remove('active');
@@ -53,13 +52,40 @@ function updateProgress() {
   });
 }
 
-prevProjectBtns.forEach(button => {
-  button.addEventListener('click', () => navigateToProject(currentProjectIndex - 1));
-});
+function handleDragStart(event) {
+  isDragging = true;
+  dragStartX = event.clientX;
+  projectsSection.style.cursor = 'grabbing'; // Change cursor to grabbing
+  event.preventDefault(); // Prevent text selection
+}
 
-nextProjectBtns.forEach(button => {
-  button.addEventListener('click', () => navigateToProject(currentProjectIndex + 1));
-});
+function handleDragMove(event) {
+  if (!isDragging) return;
+
+  const dragDistance = dragStartX - event.clientX;
+  const containerWidth = projectContainers[0].offsetWidth;
+
+  if (dragDistance > containerWidth / 2) {
+    navigateToProject(currentProjectIndex + 1);
+    isDragging = false;
+  } else if (dragDistance < -containerWidth / 2) {
+    navigateToProject(currentProjectIndex - 1);
+    isDragging = false;
+  }
+}
+
+function handleDragEnd() {
+  isDragging = false;
+  projectsSection.style.cursor = 'grab'; // Change cursor back to grab
+}
+
+projectsSection.addEventListener('mousedown', handleDragStart);
+document.addEventListener('mousemove', handleDragMove); // Use document to capture movement anywhere
+document.addEventListener('mouseup', handleDragEnd);
+document.addEventListener('mouseleave', handleDragEnd);
+
+// Initial update of progress and position
+scrollToCurrentProject();
 
 updateProgress();
 
