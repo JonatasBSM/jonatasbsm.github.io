@@ -205,6 +205,14 @@ img:hover, h1:hover, h2:hover {
     margin-bottom: 0px;
   }
 
+  .resume {
+    font-weight: 900;
+  }
+
+  #projects h4 {
+    margin-top: 0px;
+  }
+
   #projects .buttons {
     width: 90%;
     height: 5%;
