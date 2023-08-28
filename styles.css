@@ -180,6 +180,10 @@ img:hover, h1:hover, h2:hover {
     align-items: center;
   }
 
+  .project-home {
+    background-color: #333;
+  }
+
   .teambuilder-container {
     background-color: white;
     color: #333;
