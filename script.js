@@ -1,7 +1,7 @@
 
 
 
-const sections = document.querySelectorAll("nav, section, #projects .content")
+const sections = document.querySelectorAll("nav, section, #project-home, #teambuilder-container, #mbya-container")
 
 // Create a new Intersection Observer instance
 let currentSectionIndex = 0;
