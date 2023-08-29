@@ -206,10 +206,10 @@ img:hover, h1:hover, h2:hover {
   }
 
   .resume {
-    font-weight: 900;
+    font-size: 1.1em;
   }
 
-  #projects h4 {
+  #projects h2 {
     margin-top: 0px;
   }
 
@@ -624,7 +624,7 @@ section:nth-child(4n+4) h2 {
   
   /* Active Progress Point */
   .progress-point.active {
-    background-color: #5F2EE6; /* Change to the desired active color */
+    background-color: #544474; /* Change to the desired active color */
   }
 
   .badge {
@@ -632,7 +632,7 @@ section:nth-child(4n+4) h2 {
     padding: 5px 15px;
     margin-right: 5px;
     border-radius: 20px;
-    background-color: #5F2EE6;
+    background-color: #544474;
     color: #FFFFFF;
     font-size: 14px;
 
@@ -640,7 +640,7 @@ section:nth-child(4n+4) h2 {
   }
   
   .badge:hover {
-    background-color: #4521A6;
+    background-color: #2E2640;
     transform: translateX(5px);
   }
   
