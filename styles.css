@@ -59,6 +59,13 @@ nav ul li a:hover {
     height: 100vh;
 }
 
+.welcome-icon {
+    width: 45%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .welcome-text {
     margin-bottom: 65px;
     align-self: center;
@@ -595,6 +602,10 @@ section:nth-child(4n+4) h2 {
         width: fit-content;
         justify-items: center;
     }
+
+    .resume {
+        font-size: 0.8em;
+      }
 
 
 }
