@@ -13,7 +13,7 @@ function handleScroll(event) {
     currentSectionIndex += direction;
     console.log(currentSectionIndex)
 
-    if ( currentSectionIndex == 4 && direction == -1) {
+    if ( currentSectionIndex == 3 && direction == -1 || currentSectionIndex == 4 && direction == -1) {
       navigateToProject(currentProjectIndex -1)
     }
 
