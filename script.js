@@ -12,12 +12,13 @@ function handleScroll(event) {
 
     currentSectionIndex += direction;
     console.log(currentSectionIndex)
-    if(currentSectionIndex == 4 && direction == 1 || currentSectionIndex == 5 && direction == 1) {
-      navigateToProject(currentProjectIndex + 1)
+
+    if (currentSectionIndex == 4 && direction == -1 || currentSectionIndex == 5 && direction == -1) {
+      navigateToProject(currentProjectIndex -1)
     }
 
-    else if (currentSectionIndex == 4 && direction == -1 || currentSectionIndex == 5 && direction == -1) {
-      navigateToProject(currentProjectIndex -1)
+    if(currentSectionIndex == 4 && direction == 1 || currentSectionIndex == 5 && direction == 1) {
+      navigateToProject(currentProjectIndex + 1)
     }
 
     else {
