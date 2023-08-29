@@ -13,7 +13,7 @@ function handleScroll(event) {
     currentSectionIndex += direction;
     console.log(currentSectionIndex)
 
-    if (currentSectionIndex == 4 && direction == -1 || currentSectionIndex == 5 && direction == -1) {
+    if ( currentSectionIndex == 4 && direction == -1) {
       navigateToProject(currentProjectIndex -1)
     }
 
@@ -63,38 +63,6 @@ function updateProgress() {
     }
   });
 }
-
-function handleDragStart(event) {
-  isDragging = true;
-  dragStartX = event.clientX;
-  projectsSection.style.cursor = 'grabbing'; // Change cursor to grabbing
-  event.preventDefault(); // Prevent text selection
-}
-
-function handleDragMove(event) {
-  if (!isDragging) return;
-
-  const dragDistance = dragStartX - event.clientX;
-  const containerWidth = projectContainers[0].offsetWidth;
-
-  if (dragDistance > containerWidth / 2) {
-    navigateToProject(currentProjectIndex + 1);
-    isDragging = false;
-  } else if (dragDistance < -containerWidth / 2) {
-    navigateToProject(currentProjectIndex - 1);
-    isDragging = false;
-  }
-}
-
-function handleDragEnd() {
-  isDragging = false;
-  projectsSection.style.cursor = 'grab'; // Change cursor back to grab
-}
-
-projectsSection.addEventListener('mousedown', handleDragStart);
-document.addEventListener('mousemove', handleDragMove); // Use document to capture movement anywhere
-document.addEventListener('mouseup', handleDragEnd);
-document.addEventListener('mouseleave', handleDragEnd);
 
 // Initial update of progress and position
 scrollToCurrentProject();
