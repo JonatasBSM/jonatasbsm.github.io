@@ -227,7 +227,7 @@ img:hover, h1:hover, h2:hover {
     justify-content: space-around;
   }
 
-  .teambuilder-container .content {
+  #projects .content {
     width: 100%;
     height: 95%;
     display: flex;
@@ -237,7 +237,7 @@ img:hover, h1:hover, h2:hover {
   }
 
 
-  .teambuilder-container .firstCol, .teambuilder-container .secondCol {
+  #projects .firstCol, #projects .secondCol {
     display: flex;
     flex-direction: column;
     width: 30%;

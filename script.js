@@ -1,7 +1,7 @@
 
 
 
-const sections = document.querySelectorAll("nav, section")
+const sections = document.querySelectorAll("nav, section, #projects .content")
 
 // Create a new Intersection Observer instance
 let currentSectionIndex = 0;
@@ -9,16 +9,27 @@ let currentSectionIndex = 0;
 // Function to handle the scroll event
 function handleScroll(event) {
     const direction = event.deltaY > 0 ? 1 : -1; // Check scroll direction
+
     currentSectionIndex += direction;
+    console.log(currentSectionIndex)
+    if(currentSectionIndex == 4 && direction == 1 || currentSectionIndex == 5 && direction == 1) {
+      navigateToProject(currentProjectIndex + 1)
+    }
 
-    // Ensure the index stays within bounds
-    currentSectionIndex = Math.min(Math.max(currentSectionIndex, 0), sections.length - 1);
+    else if (currentSectionIndex == 4 && direction == -1 || currentSectionIndex == 5 && direction == -1) {
+      navigateToProject(currentProjectIndex -1)
+    }
 
-    // Scroll to the next section
-    sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
-
-    // Prevent default scrolling behavior
-    event.preventDefault();
+    else {
+      // Ensure the index stays within bounds
+      currentSectionIndex = Math.min(Math.max(currentSectionIndex, 0), sections.length - 1);
+  
+      // Scroll to the next section
+      sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+  
+      // Prevent default scrolling behavior
+      event.preventDefault();
+    }
 }
 
 // Attach the scroll event listener to the document
