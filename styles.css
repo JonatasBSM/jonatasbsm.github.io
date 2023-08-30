@@ -408,14 +408,6 @@ section:nth-child(4n+4) h2 {
     background-color: #ccc; /* Adjust the color as desired for empty skill marks */
 }
 
-
-
-
-
-
-
-
-
 #battle-frontier-image {
     width: 70%;
 }
@@ -423,8 +415,6 @@ section:nth-child(4n+4) h2 {
 #mbya-image {
     width: 50%;
 }
-
-
 
 .close {
     color: #aaa;
@@ -498,8 +488,6 @@ section:nth-child(4n+4) h2 {
     #welcome-section, section {
         height: fit-content;
     }
-
-
 
     /* ... */
     section {
@@ -593,6 +581,24 @@ section:nth-child(4n+4) h2 {
 
 @media (max-width: 1500px) {
 
+    #projects .content {
+        width: 100%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+    }
+
+    #projects .firstCol, #projects .secondCol {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 80%;
+        text-align: left;
+        justify-content: space-between;
+      }
+
     #skills .container ul {
         margin-top: 5px;
         margin-left: 0px;
@@ -654,7 +660,3 @@ section:nth-child(4n+4) h2 {
     background-color: #2E2640;
     transform: translateX(5px);
   }
-  
-
-  
-  
