@@ -1,6 +1,3 @@
-
-
-
 const sections = document.querySelectorAll("nav, #about, #skills, #project-home, #teambuilder-container, #mbya-container, #contact")
 console.log(sections)
 
@@ -34,8 +31,23 @@ function handleScroll(event) {
     }
 }
 
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+      const context = this;
+      const args = arguments;
+      if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+      }
+  };
+}
+
+const throttledHandleScroll = throttle(handleScroll, 500);
+
 // Attach the scroll event listener to the document
-document.addEventListener('wheel', handleScroll, { passive: false });
+document.addEventListener('wheel', throttledHandleScroll, { passive: false });
 
 const projectContainers = document.querySelectorAll('.project-home, .teambuilder-container, .mbya-container');
 const projectsSection = document.getElementById('projects');
