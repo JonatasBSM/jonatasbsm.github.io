@@ -577,9 +577,6 @@ section:nth-child(4n+4) h2 {
         margin-top: 0px;
         row-gap: 1em;
     }
-}
-
-@media (max-width: 1500px) {
 
     #projects .content {
         width: 100%;
@@ -598,6 +595,9 @@ section:nth-child(4n+4) h2 {
         text-align: left;
         justify-content: space-between;
       }
+}
+
+@media (max-width: 1500px) {
 
     #skills .container ul {
         margin-top: 5px;
