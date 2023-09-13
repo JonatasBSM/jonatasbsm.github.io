@@ -236,6 +236,12 @@ img:hover, h1:hover, h2:hover {
     align-items: center;
   }
 
+  #project-home .content
+  {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
 
   #projects .firstCol, #projects .secondCol {
     display: flex;
