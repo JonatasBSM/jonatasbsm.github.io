@@ -472,6 +472,22 @@ section:nth-child(4n+4) h2 {
         height: auto;
       }
 
+    #skills {
+        height: 100vh;
+    }
+
+    #projects img {
+        width: 20%
+    }
+
+    #projects .resume {
+        font-size: 0.7em;
+    }
+
+    #projects img {
+        width: 40%;
+    }
+
     .custom-list {
         grid-template-columns: 1fr
     }
