@@ -3,13 +3,21 @@ console.log(sections)
 
 // Create a new Intersection Observer instance
 let currentSectionIndex = 0;
+let touchPoint = 0
 
 // Function to handle the scroll event
 function handleScroll(event) {
+
+    if(event.touches) {
+      console.log(event.touches[0].clientY, touchPoint)
+      event.deltaY = event.touches[0].clientY > touchPoint ? 1 : -1
+      touchPoint = event.touches[0].clientY
+      
+    }
+
     const direction = event.deltaY > 0 ? 1 : -1; // Check scroll direction
 
     currentSectionIndex += direction;
-    console.log(currentSectionIndex)
 
     if ( currentSectionIndex == 3 && direction == -1 || currentSectionIndex == 4 && direction == -1) {
       navigateToProject(currentProjectIndex -1)
@@ -48,6 +56,7 @@ const throttledHandleScroll = throttle(handleScroll, 500);
 
 // Attach the scroll event listener to the document
 document.addEventListener('wheel', throttledHandleScroll, { passive: false });
+document.addEventListener('touchmove', throttledHandleScroll, { passive: false });
 
 const projectContainers = document.querySelectorAll('.project-home, .teambuilder-container, .mbya-container');
 const projectsSection = document.getElementById('projects');
