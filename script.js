@@ -1,21 +1,29 @@
 const sections = document.querySelectorAll("nav, #about, #skills, #project-home, #teambuilder-container, #mbya-container, #contact")
-console.log(sections)
+
 
 // Create a new Intersection Observer instance
 let currentSectionIndex = 0;
 let touchPoint = 0
+let scrollStart = 0
+let scrollEnd = 0
 
 // Function to handle the scroll event
-function handleScroll(event) {
+function handleScroll(event, param1) {
 
-    if(event.touches) {
-      console.log(event.touches[0].clientY, touchPoint)
-      event.deltaY = event.touches[0].clientY > touchPoint ? 1 : -1
-      touchPoint = event.touches[0].clientY
+
+    let direction = 0
+  
+    if(event.direction) {
+
+      direction = event.direction
+      event = event.originalEvent
+      
       
     }
 
-    const direction = event.deltaY > 0 ? 1 : -1; // Check scroll direction
+    else {
+      direction = event.deltaY > 0 ? 1 : -1; // Check scroll direction
+    }
 
     currentSectionIndex += direction;
 
@@ -39,6 +47,13 @@ function handleScroll(event) {
     }
 }
 
+function handleScrollWithParams(param1 = null) {
+
+  return function(event) {
+      handleScroll(event, param1);
+  };
+}
+
 function throttle(func, limit) {
   let inThrottle;
   return function() {
@@ -52,11 +67,33 @@ function throttle(func, limit) {
   };
 }
 
-const throttledHandleScroll = throttle(handleScroll, 500);
+const throttledHandleScroll = throttle(handleScrollWithParams(), 500);
 
 // Attach the scroll event listener to the document
 document.addEventListener('wheel', throttledHandleScroll, { passive: false });
-document.addEventListener('touchmove', throttledHandleScroll, { passive: false });
+document.addEventListener('touchstart', (e) => {
+  scrollStart = e.touches[0].clientY;
+});
+
+document.addEventListener('touchend', (e) => {
+  scrollEnd = e.changedTouches[0].clientY;
+  const deltaY = scrollEnd - scrollStart;
+
+  let direction = 0;
+
+    // Check the direction of the scroll
+    if (deltaY > 0) {
+       
+      direction = -1;
+    } else {
+        // Scroll up
+        direction = 1;
+    }
+
+  const eventWithDirection = { direction, originalEvent: e };
+  throttledHandleScroll(eventWithDirection); 
+
+});
 
 const projectContainers = document.querySelectorAll('.project-home, .teambuilder-container, .mbya-container');
 const projectsSection = document.getElementById('projects');
