@@ -448,11 +448,26 @@ section:nth-child(4n+4) h2 {
 }
 
 @media (max-width: 540px) {
-    #about, #projects {
+    #about p {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 540px) {
+
+    #projects {
         padding-top: 90px;
+    }
+
+    #about, #projects {
         padding-right: 0px;
         padding-left: 0px
     }
+
+    #about {
+        height: 100vh;
+    }
+
 }
 @media (max-width: 539px) {
 
@@ -505,6 +520,10 @@ section:nth-child(4n+4) h2 {
     #imgContact {
         width: 90% !important;
     }
+
+    .resume {
+        font-size: 0.8em;
+      }
 }
 
 @media (max-width: 820px) {
@@ -577,6 +596,10 @@ section:nth-child(4n+4) h2 {
         flex-direction: column;
     }
 
+    .about-content p {
+        max-width: none;
+    }
+
     .social-icons {
         margin-top: 0px;
         row-gap: 1em;
@@ -612,10 +635,6 @@ section:nth-child(4n+4) h2 {
         width: fit-content;
         justify-items: center;
     }
-
-    .resume {
-        font-size: 0.8em;
-      }
 
 
 }
