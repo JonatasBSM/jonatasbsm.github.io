@@ -447,11 +447,7 @@ section:nth-child(4n+4) h2 {
     justify-content: space-between;
 }
 
-@media (max-width: 540px) {
-    #about p {
-        font-size: 0.7em;
-    }
-}
+
 
 @media (max-width: 540px) {
 
@@ -466,6 +462,14 @@ section:nth-child(4n+4) h2 {
 
     #about {
         height: 100vh;
+    }
+
+    #about p {
+        font-size: 0.7em;
+    }
+
+    .custom-box {
+        width: 60% !important;
     }
 
 }
@@ -622,6 +626,8 @@ section:nth-child(4n+4) h2 {
         text-align: left;
         justify-content: space-between;
       }
+
+
 }
 
 @media (max-width: 1500px) {
@@ -636,7 +642,9 @@ section:nth-child(4n+4) h2 {
         justify-items: center;
     }
 
-
+    .custom-box {
+        width: 70%;
+    }
 }
 
 @media (min-width: 1501px) {
