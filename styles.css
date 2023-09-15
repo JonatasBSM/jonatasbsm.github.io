@@ -627,6 +627,10 @@ section:nth-child(4n+4) h2 {
         justify-content: space-between;
       }
 
+      #spanForProject {
+        display: none;
+      }
+
 
 }
 
