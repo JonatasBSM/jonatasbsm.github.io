@@ -624,7 +624,7 @@ section:nth-child(4n+4) h2 {
         width: 90%;
         height: 80%;
         text-align: left;
-        justify-content: space-between;
+        justify-content: center;
       }
 
       #spanForProject {
