@@ -9,10 +9,16 @@ let scrollEnd = 0
 const navLinks = document.querySelectorAll("nav a")
 navLinks.forEach((a) => {
   a.addEventListener("click", () => {
+    let href = event.target.href.split("#").pop()
+
     currentSectionIndex = Array.from(sections).findIndex((section) => {
-      return section.id == event.target.href.split("#").pop()
+      return section.id == href
     })
-    console.log(currentSectionIndex)
+    console.log(document.getElementById(href))
+    document.getElementById(href).scrollIntoView({
+      behavior: 'smooth'
+    })
+    event.preventDefault();
   })
 
 })
