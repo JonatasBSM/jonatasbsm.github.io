@@ -500,8 +500,8 @@ section:nth-child(4n+4) h2 {
         height: 100vh;
     }
 
-    #projects img {
-        width: 20%
+    #mbya-container img {
+        width: 20% !important
     }
 
     #projects .resume {
@@ -631,6 +631,9 @@ section:nth-child(4n+4) h2 {
         display: none;
       }
 
+      .badge {
+        margin-top: 5px;
+      }
 
 }
 

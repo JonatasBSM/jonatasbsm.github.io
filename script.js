@@ -1,11 +1,21 @@
 const sections = document.querySelectorAll("nav, #about, #skills, #project-home, #teambuilder-container, #mbya-container, #contact")
 
-
 // Create a new Intersection Observer instance
-let currentSectionIndex = 0;
+var currentSectionIndex = 0;
 let touchPoint = 0
 let scrollStart = 0
 let scrollEnd = 0
+
+const navLinks = document.querySelectorAll("nav a")
+navLinks.forEach((a) => {
+  a.addEventListener("click", () => {
+    currentSectionIndex = Array.from(sections).findIndex((section) => {
+      return section.id == event.target.href.split("#").pop()
+    })
+    console.log(currentSectionIndex)
+  })
+
+})
 
 // Function to handle the scroll event
 function handleScroll(event, param1) {
@@ -85,13 +95,17 @@ document.addEventListener('touchend', (e) => {
     if (deltaY > 0) {
        
       direction = -1;
-    } else {
+      const eventWithDirection = { direction, originalEvent: e };
+      throttledHandleScroll(eventWithDirection); 
+
+    } else if (deltaY < 0) {
         // Scroll up
         direction = 1;
+        const eventWithDirection = { direction, originalEvent: e };
+        throttledHandleScroll(eventWithDirection); 
     }
 
-  const eventWithDirection = { direction, originalEvent: e };
-  throttledHandleScroll(eventWithDirection); 
+
 
 });
 
