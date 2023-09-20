@@ -14,7 +14,7 @@ navLinks.forEach((a) => {
     currentSectionIndex = Array.from(sections).findIndex((section) => {
       return section.id == href
     })
-    console.log(document.getElementById(href))
+
     document.getElementById(href).scrollIntoView({
       behavior: 'smooth'
     })

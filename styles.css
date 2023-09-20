@@ -635,7 +635,13 @@ section:nth-child(4n+4) h2 {
         margin-top: 5px;
       }
 
+      nav ul li a:hover {
+        color: #5F2EE6;
+    }
+
 }
+
+
 
 @media (max-width: 1500px) {
 
