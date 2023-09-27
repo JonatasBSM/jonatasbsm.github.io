@@ -89,7 +89,7 @@ const excludedDiv = document.querySelector('.resume');
 // Attach the scroll event listener to the document
 document.addEventListener('wheel', function(event) {
   // Check if the event target is not the excluded div
-  if (event.target !== excludedDiv && !excludedDiv.contains(event.target)) {
+  if (event.target.className !== "resume" ) {
     // Your throttled scroll handling function
     throttledHandleScroll(event);
   }
