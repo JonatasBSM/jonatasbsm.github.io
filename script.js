@@ -85,8 +85,15 @@ function throttle(func, limit) {
 
 const throttledHandleScroll = throttle(handleScrollWithParams(), 500);
 
+const excludedDiv = document.querySelector('.resume');
 // Attach the scroll event listener to the document
-document.addEventListener('wheel', throttledHandleScroll, { passive: false });
+document.addEventListener('wheel', function(event) {
+  // Check if the event target is not the excluded div
+  if (event.target !== excludedDiv && !excludedDiv.contains(event.target)) {
+    // Your throttled scroll handling function
+    throttledHandleScroll(event);
+  }
+}, { passive: false });
 document.addEventListener('touchstart', (e) => {
   scrollStart = e.touches[0].clientY;
 });

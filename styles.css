@@ -213,6 +213,7 @@ img:hover, h1:hover, h2:hover {
 
   .resume {
     font-size: 1.1em;
+    overflow-y: auto;
   }
 
   #projects h2 {
