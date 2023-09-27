@@ -216,6 +216,17 @@ img:hover, h1:hover, h2:hover {
     overflow-y: auto;
   }
 
+  .resume::-webkit-scrollbar {
+    width: 6px; /* You can adjust the width as needed */
+    background-color: transparent; /* Hide the track background */
+  }
+  
+  /* Style the scrollbar thumb */
+  .resume::-webkit-scrollbar-thumb {
+    background-color: #999; /* Change the color of the scrollbar thumb */
+    border-radius: 3px; /* Rounded corners for the thumb */
+  }
+
   #projects h2 {
     margin-top: 0px;
   }
