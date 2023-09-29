@@ -88,8 +88,11 @@ const throttledHandleScroll = throttle(handleScrollWithParams(), 500);
 const excludedDiv = document.querySelector('.resume');
 // Attach the scroll event listener to the document
 document.addEventListener('wheel', function(event) {
+
+  var hasOverflow = event.target.scrollHeight > event.target.clientHeight;
+
   // Check if the event target is not the excluded div
-  if (event.target.className !== "resume" ) {
+  if (event.target.className !== "resume" || (event.target.className == "resume" && !hasOverflow)) {
     // Your throttled scroll handling function
     throttledHandleScroll(event);
   }
