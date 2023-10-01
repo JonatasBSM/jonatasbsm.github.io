@@ -518,7 +518,7 @@ section:nth-child(4n+4) h2 {
 
     #projects .resume {
         font-size: 0.7em;
-        max-height: 80%;
+
     }
 
     #projects img {
@@ -650,6 +650,10 @@ section:nth-child(4n+4) h2 {
 
       nav ul li a:hover {
         color: #5F2EE6;
+    }
+
+    .resume {
+        max-height: 60%;
     }
 
 }
