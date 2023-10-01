@@ -637,7 +637,7 @@ section:nth-child(4n+4) h2 {
         width: 90%;
         height: 80%;
         text-align: left;
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       #spanForProject {
@@ -652,7 +652,9 @@ section:nth-child(4n+4) h2 {
         color: #5F2EE6;
     }
 
-
+    .resume {
+        max-height: 40%;
+    }
 
 }
 
@@ -674,9 +676,7 @@ section:nth-child(4n+4) h2 {
         width: 70%;
     }
 
-    .resume {
-        max-height: 40%;
-    }
+
 }
 
 @media (min-width: 1501px) {
