@@ -518,6 +518,7 @@ section:nth-child(4n+4) h2 {
 
     #projects .resume {
         font-size: 0.7em;
+        max-height: 80%;
     }
 
     #projects img {
