@@ -518,7 +518,6 @@ section:nth-child(4n+4) h2 {
 
     #projects .resume {
         font-size: 0.7em;
-
     }
 
     #projects img {
@@ -637,7 +636,7 @@ section:nth-child(4n+4) h2 {
         width: 90%;
         height: 80%;
         text-align: left;
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       #spanForProject {
@@ -650,10 +649,6 @@ section:nth-child(4n+4) h2 {
 
       nav ul li a:hover {
         color: #5F2EE6;
-    }
-
-    .resume {
-        max-height: 40%;
     }
 
 }
@@ -675,8 +670,6 @@ section:nth-child(4n+4) h2 {
     .custom-box {
         width: 70%;
     }
-
-
 }
 
 @media (min-width: 1501px) {
@@ -710,7 +703,7 @@ section:nth-child(4n+4) h2 {
   
   /* Active Progress Point */
   .progress-point.active {
-    background-color: #544474; /* Change to the desired active color */
+    background-color: #5F2EE6; /* Change to the desired active color */
   }
 
   .badge {
@@ -718,7 +711,7 @@ section:nth-child(4n+4) h2 {
     padding: 5px 15px;
     margin-right: 5px;
     border-radius: 20px;
-    background-color: #544474;
+    background-color: #5F2EE6;
     color: #FFFFFF;
     font-size: 14px;
 
