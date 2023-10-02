@@ -104,17 +104,17 @@ document.addEventListener('touchstart', (e) => {
 document.addEventListener('touchend', (e) => {
   scrollEnd = e.changedTouches[0].clientY;
   const deltaY = scrollEnd - scrollStart;
-
+  console.log(deltaY)
   let direction = 0;
 
     // Check the direction of the scroll
-    if (deltaY > 0) {
+    if (deltaY > 100) {
        
       direction = -1;
       const eventWithDirection = { direction, originalEvent: e };
       throttledHandleScroll(eventWithDirection); 
 
-    } else if (deltaY < 0) {
+    } else if (deltaY < -100) {
         // Scroll up
         direction = 1;
         const eventWithDirection = { direction, originalEvent: e };
